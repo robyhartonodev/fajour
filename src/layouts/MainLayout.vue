@@ -15,9 +15,32 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer
+      v-model="leftDrawerOpen"
+      class="shadow-4 bg-primary text-white"
+      show-if-above
+      bordered
+    >
       <q-list>
-        <q-item-label header> Fajour App </q-item-label>
+        <q-item-label header class="text-h6 text-white">
+          Fajour App
+        </q-item-label>
+
+        <!-- Drawer navigation items -->
+        <q-item
+          v-for="item in drawerItemList"
+          :key="item.content"
+          clickable
+          v-ripple
+          :to="item.to"
+          exact-active-class="text-primary bg-white"
+        >
+          <q-item-section avatar>
+            <q-icon :name="item.icon" />
+          </q-item-section>
+
+          <q-item-section>{{ item.content }}</q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -33,16 +56,20 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
   name: 'MainLayout',
 
-  // components: {
-  //   EssentialLink,
-  // },
+  components: {},
 
   setup() {
     const leftDrawerOpen = ref(false);
 
+    const drawerItemList = ref([
+      { icon: 'home', content: 'Home', to: '/' },
+      // { icon: 'accessibility', content: 'Thank God' },
+      { icon: 'settings', content: 'Settings', to: '/settings' },
+    ]);
+
     return {
-      // essentialLinks: linksList,
       leftDrawerOpen,
+      drawerItemList,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
