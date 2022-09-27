@@ -2,9 +2,23 @@ import { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '/onboarding',
+    component: () => import('layouts/OnboardingLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/OnboardingPage.vue') },
+    ],
+  },
+
+  {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
+  },
+
+  {
+    path: '/schedule',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/SchedulePage.vue') }],
   },
 
   {
