@@ -23,6 +23,24 @@
           </q-item>
         </q-item-section>
       </q-item>
+
+      <q-separator></q-separator>
+
+      <q-item-label header>System</q-item-label>
+
+      <q-item clickable v-ripple @click="removeJourneyRecords()">
+        <q-item-section>
+          <q-item tag="label">
+            <q-item-section avatar>
+              <q-icon color="primary" name="delete_outline" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Reset Journey</q-item-label>
+              <q-item-label caption> Delete your journey records </q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-item-section>
+      </q-item>
     </q-list>
   </q-page>
 </template>
@@ -30,6 +48,7 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import { useQuasar } from 'quasar';
+import { Preferences } from '@capacitor/preferences';
 
 export default defineComponent({
   name: 'SettingsPage',
@@ -42,6 +61,24 @@ export default defineComponent({
       isDarkMode.value = quasar.dark.isActive;
     }
 
+    function removeJourneyRecords() {
+      Preferences.remove({ key: 'fajour-journey-record' })
+        .then(() => {
+          quasar.notify({
+            message: 'Reseted successfully!',
+            color: 'secondary',
+            icon: 'check_circle',
+          });
+        })
+        .catch(() => {
+          quasar.notify({
+            message: 'Failed to remove',
+            color: 'danger',
+            icon: 'cancel',
+          });
+        });
+    }
+
     onMounted(() => {
       isDarkMode.value = quasar.dark.isActive;
     });
@@ -49,6 +86,7 @@ export default defineComponent({
     return {
       isDarkMode,
       toggleDarkMode,
+      removeJourneyRecords,
     };
   },
 });
