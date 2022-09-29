@@ -21,7 +21,7 @@ export default defineComponent({
             console.log('Value has not been set. Initialize preferences...');
             Preferences.set({
               key: 'fajour-journey-record',
-              value: '[]',
+              value: '{}',
             }).catch(() => {
               quasar.notify({
                 message: 'Failed to fetch journey records',

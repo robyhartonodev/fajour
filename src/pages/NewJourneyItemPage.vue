@@ -89,6 +89,13 @@ import { date, useQuasar } from 'quasar';
 import { Preferences } from '@capacitor/preferences';
 import { useRouter } from 'vue-router';
 
+// TODO unique id for each item, inside of the
+// TODO structure array like this:
+// [
+// '30-08-2022': [{'title': 'title1', 'detail': 'detail1', 'category': 'category1' }, {'title': 'title2', 'detail': 'detail2', 'category': 'category2' }],
+// '01-09-2022': [{'title': 'title1', 'detail': 'detail1', 'category': 'category1' }]
+// ]
+
 export default defineComponent({
   name: 'NewJourneyItemPage',
   setup() {
@@ -128,21 +135,15 @@ export default defineComponent({
     ]);
 
     function onSubmit() {
-      console.log(detail.value);
-      console.log(name.value);
-      console.log(category.value);
-      console.log(itemDate.value);
-
       const recordObject = {
         title: name.value,
         detail: detail.value,
         category: category.value,
-        itemDate: itemDate.value,
       };
 
       // 1. Get preference of fajour journey record
       // 2. Parse string json value into array object
-      // 3. Push a new valid record into the array
+      // 3. Push a new valid record into the array, based on the itemDate as key
       // 4. Transform array into json string
       // 5. Set the preference with the given key with the new stored value
       Preferences.get({
@@ -154,11 +155,22 @@ export default defineComponent({
 
           console.log(parsedStringJson);
 
-          parsedStringJson.push(recordObject);
+          const isItemDateExist = itemDate.value in parsedStringJson;
+
+          console.log(isItemDateExist);
+
+          if (!isItemDateExist) {
+            parsedStringJson[itemDate.value] = [recordObject];
+          }
+          if (isItemDateExist) {
+            parsedStringJson[itemDate.value].push(recordObject);
+          }
 
           console.log(parsedStringJson);
 
           parsedStringJson = JSON.stringify(parsedStringJson);
+
+          console.log(parsedStringJson);
 
           Preferences.set({
             key: 'fajour-journey-record',

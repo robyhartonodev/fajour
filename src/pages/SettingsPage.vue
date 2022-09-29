@@ -69,10 +69,42 @@ export default defineComponent({
             color: 'secondary',
             icon: 'check_circle',
           });
+
+          initialJourneyPreference();
         })
         .catch(() => {
           quasar.notify({
             message: 'Failed to remove',
+            color: 'danger',
+            icon: 'cancel',
+          });
+        });
+    }
+
+    function initialJourneyPreference() {
+      Preferences.get({
+        key: 'fajour-journey-record',
+      })
+        .then((value) => {
+          if (value.value === null) {
+            console.log('Value has not been set. Initialize preferences...');
+            Preferences.set({
+              key: 'fajour-journey-record',
+              value: '{}',
+            }).catch(() => {
+              quasar.notify({
+                message: 'Failed to fetch journey records',
+                color: 'danger',
+                icon: 'cancel',
+              });
+            });
+          } else {
+            console.log('Value has been set. Skipped initialization...');
+          }
+        })
+        .catch(() => {
+          quasar.notify({
+            message: 'Failed to fetch journey records',
             color: 'danger',
             icon: 'cancel',
           });
