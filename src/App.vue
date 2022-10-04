@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import { Preferences } from '@capacitor/preferences';
+import localforage from 'localforage';
 import { useQuasar } from 'quasar';
 
 export default defineComponent({
@@ -12,39 +12,20 @@ export default defineComponent({
   setup() {
     const quasar = useQuasar();
 
-    function initialJourneyPreference() {
-      Preferences.get({
-        key: 'fajour-journey-record',
-      })
-        .then((value) => {
-          if (value.value === null) {
-            console.log('Value has not been set. Initialize preferences...');
-            Preferences.set({
-              key: 'fajour-journey-record',
-              value: '{}',
-            }).catch(() => {
-              quasar.notify({
-                message: 'Failed to fetch journey records',
-                color: 'danger',
-                icon: 'cancel',
-              });
-            });
-          } else {
-            console.log('Value has been set. Skipped initialization...');
-          }
-        })
-        .catch(() => {
-          quasar.notify({
-            message: 'Failed to fetch journey records',
-            color: 'danger',
-            icon: 'cancel',
-          });
-        });
-    }
+    const userPreferenceStore = localforage.createInstance({
+      name: 'userPreference',
+    });
 
     onMounted(() => {
-      initialJourneyPreference();
+      // Dark Mode
+      userPreferenceStore.getItem('isDarkMode').then((value) => {
+        if (value) {
+          quasar.dark.set(value as boolean);
+        }
+      });
     });
+
+    return {};
   },
 });
 </script>

@@ -50,13 +50,7 @@
     </q-drawer>
 
     <q-page-container>
-      <transition
-        appear
-        enter-active-class="animated slideInRight slow"
-        leave-active-class="animated slideOutLeft slow"
-      >
         <router-view />
-      </transition>
     </q-page-container>
   </q-layout>
 </template>

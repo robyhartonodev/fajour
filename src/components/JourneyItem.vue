@@ -25,8 +25,8 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import JourneyDetailItem from 'src/components/JourneyDetailItem.vue';
-import { Preferences } from '@capacitor/preferences';
 import { useQuasar } from 'quasar';
+import localforage from 'localforage';
 
 interface JourneyItem {
   title: string;
@@ -44,26 +44,16 @@ export default defineComponent({
     JourneyDetailItem,
   },
   setup() {
-    const quasar = useQuasar();
     const journeyItemList = ref<JourneyList>({});
 
     function getJourneyItem() {
-      Preferences.get({
-        key: 'fajour-journey-record',
-      })
-        .then((value) => {
-          const jsonValue = value.value as string;
-          let parsedStringJson = JSON.parse(jsonValue);
+      const userJourneyStore = localforage.createInstance({
+        name: 'userJourney',
+      });
 
-          journeyItemList.value = parsedStringJson;
-        })
-        .catch(() => {
-          quasar.notify({
-            message: 'Failed to fetch journey records',
-            color: 'danger',
-            icon: 'cancel',
-          });
-        });
+      userJourneyStore.iterate((value, key) => {
+        journeyItemList.value[key] = value as JourneyItem[];
+      });
     }
 
     onMounted(() => {

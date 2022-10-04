@@ -86,8 +86,8 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import { date, useQuasar } from 'quasar';
-import { Preferences } from '@capacitor/preferences';
 import { useRouter } from 'vue-router';
+import localforage from 'localforage';
 
 // TODO unique id for each item, inside of the
 // TODO structure array like this:
@@ -141,64 +141,28 @@ export default defineComponent({
         category: category.value,
       };
 
-      // 1. Get preference of fajour journey record
-      // 2. Parse string json value into array object
-      // 3. Push a new valid record into the array, based on the itemDate as key
-      // 4. Transform array into json string
-      // 5. Set the preference with the given key with the new stored value
-      Preferences.get({
-        key: 'fajour-journey-record',
-      })
-        .then((value) => {
-          const jsonValue = value.value as string;
-          let parsedStringJson = JSON.parse(jsonValue);
+      const userJourneyStore = localforage.createInstance({
+        name: 'userJourney',
+      });
 
-          console.log(parsedStringJson);
+      userJourneyStore.getItem(itemDate.value).then((value) => {
+        if (value == null) {
+          userJourneyStore.setItem(itemDate.value, [recordObject]);
+        }
 
-          const isItemDateExist = itemDate.value in parsedStringJson;
+        if (value != null) {
+          const arrayObject = value as unknown[];
+          arrayObject.push(recordObject);
+          userJourneyStore.setItem(itemDate.value, arrayObject);
+        }
 
-          console.log(isItemDateExist);
-
-          if (!isItemDateExist) {
-            parsedStringJson[itemDate.value] = [recordObject];
-          }
-          if (isItemDateExist) {
-            parsedStringJson[itemDate.value].push(recordObject);
-          }
-
-          console.log(parsedStringJson);
-
-          parsedStringJson = JSON.stringify(parsedStringJson);
-
-          console.log(parsedStringJson);
-
-          Preferences.set({
-            key: 'fajour-journey-record',
-            value: parsedStringJson,
-          })
-            .then(() => {
-              router.push('/');
-              quasar.notify({
-                message: 'Created successfully!',
-                color: 'secondary',
-                icon: 'check_circle',
-              });
-            })
-            .catch(() => {
-              quasar.notify({
-                message: 'Failed to create',
-                color: 'danger',
-                icon: 'cancel',
-              });
-            });
-        })
-        .catch(() => {
-          quasar.notify({
-            message: 'Failed to fetch journey records',
-            color: 'danger',
-            icon: 'cancel',
-          });
+        router.push('/');
+        quasar.notify({
+          message: 'Created successfully!',
+          color: 'secondary',
+          icon: 'check_circle',
         });
+      });
     }
 
     function onReset() {
@@ -210,28 +174,6 @@ export default defineComponent({
 
     onMounted(() => {
       itemDate.value = date.formatDate(Date.now(), 'DD-MM-YYYY');
-
-      // Get preference of fajour journey record
-      // Parse string json value into array object
-      // Push a new valid record into the array
-      // Transform array into json string
-      // Set the preference with the given key with the new stored value
-      Preferences.get({
-        key: 'fajour-journey-record',
-      })
-        .then((value) => {
-          const jsonValue = value.value as string;
-          const parsedStringJson = JSON.parse(jsonValue);
-
-          console.log(parsedStringJson);
-        })
-        .catch(() => {
-          quasar.notify({
-            message: 'Failed to fetch journey records',
-            color: 'danger',
-            icon: 'cancel',
-          });
-        });
     });
 
     return {

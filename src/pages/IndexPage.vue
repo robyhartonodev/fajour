@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import JourneyList from 'src/components/JourneyList.vue';
 
 export default defineComponent({
