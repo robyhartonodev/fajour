@@ -4,7 +4,7 @@
     :key="index"
     class="q-mb-sm"
     v-ripple
-    v-touch-hold:300.mouse="() => onItemClick(item)"
+    v-touch-hold:300.mouse="() => onItemClick()"
   >
     <q-card-section>
       <q-item clickable>
@@ -52,6 +52,8 @@
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import localforage from 'localforage';
+import { useQuasar } from 'quasar';
 
 interface JourneyItem {
   id: string;
@@ -69,9 +71,14 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props, { emit }) {
     const openDialog = ref(false);
     const router = useRouter();
+    const quasar = useQuasar();
+
+    const userJourneyStore = localforage.createInstance({
+      name: 'userJourney',
+    });
 
     function getIconString(category: string): string {
       if (category == 'comment') {
@@ -93,14 +100,32 @@ export default defineComponent({
       return 'unknown';
     }
 
-    function onItemClick(item: JourneyItem) {
+    function onItemClick() {
       openDialog.value = true;
     }
 
     function onDelete(item: JourneyItem) {
-      // TODO delete logic
-      // TODO emit to parent list to re-fetch the journey item
+      userJourneyStore.iterate((value) => {
+        const arrayValue = value as JourneyItem[];
 
+        const recordValue = arrayValue.find((i) => i.id == item.id);
+
+        if (recordValue) {
+          const newArrayValue = arrayValue.filter((i) => i.id != item.id);
+          userJourneyStore.setItem(item.date, newArrayValue);
+
+          if (newArrayValue.length == 0) {
+            userJourneyStore.removeItem(item.date);
+          }
+
+          emit('delete-item');
+          quasar.notify({
+            message: 'Deleted successfully!',
+            color: 'secondary',
+            icon: 'check_circle',
+          });
+        }
+      });
       openDialog.value = false;
     }
 

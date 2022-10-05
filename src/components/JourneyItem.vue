@@ -34,7 +34,10 @@
         </div>
         <div class="col-9">
           <q-list class="q-ml-sm">
-            <journey-detail-item :list="value"></journey-detail-item>
+            <journey-detail-item
+              :list="value"
+              @delete-item="getJourneyItem()"
+            ></journey-detail-item>
           </q-list>
         </div>
       </div>

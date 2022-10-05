@@ -1,6 +1,8 @@
 <template>
   <q-page padding>
-    <div class="text-h4 text-primary q-mt-md">New Record</div>
+    <div class="text-h4 text-primary q-mt-md">
+      {{ formMode == 'new' ? 'New' : 'Edit' }} Record
+    </div>
 
     <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md q-my-md">
       <!-- Date -->
@@ -221,22 +223,19 @@ export default defineComponent({
         let recordValue: JourneyItem | undefined;
 
         // Get the record from the user journey store
-        userJourneyStore
-          .iterate((value) => {
-            const arrayValue = value as JourneyItem[];
+        userJourneyStore.iterate((value) => {
+          const arrayValue = value as JourneyItem[];
 
-            recordValue = arrayValue.find((item) => item.id === itemId.value);
-          })
-          .then(() => {
-            // Pre-fill the form fields
-            if (recordValue) {
-              itemDate.value = recordValue.date;
-              itemId.value = recordValue.id;
-              detail.value = recordValue.detail;
-              category.value = recordValue.category;
-              title.value = recordValue.title;
-            }
-          });
+          recordValue = arrayValue.find((item) => item.id == itemId.value);
+
+          if (recordValue) {
+            itemDate.value = recordValue.date;
+            itemId.value = recordValue.id;
+            detail.value = recordValue.detail;
+            category.value = recordValue.category;
+            title.value = recordValue.title;
+          }
+        });
       }
       if (route.name == 'NewJourney') {
         formMode.value = 'new';
@@ -255,6 +254,7 @@ export default defineComponent({
       categoryOptions,
       onSubmit,
       onReset,
+      formMode,
     };
   },
 });
