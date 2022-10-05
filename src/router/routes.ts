@@ -19,7 +19,23 @@ const routes: RouteRecordRaw[] = [
     path: '/new/journey',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/NewJourneyItemPage.vue') },
+      {
+        path: '',
+        name: 'NewJourney',
+        component: () => import('src/pages/JourneyItemPage.vue'),
+      },
+    ],
+  },
+
+  {
+    path: '/edit/:id/journey',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'EditJourney',
+        component: () => import('src/pages/JourneyItemPage.vue'),
+      },
     ],
   },
 

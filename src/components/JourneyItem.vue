@@ -1,37 +1,59 @@
 <template>
-  <q-item v-for="(value, key) in journeyItemList" :key="key">
-    <div class="row items-start full-width">
-      <div class="col-3">
-        <div
-          class="
-            q-pa-md
-            rounded-borders
-            bg-secondary
-            text-h4 text-white text-center
-          "
-        >
-          {{ key.toString().slice(0, 2) }}
+  <div>
+    <!-- Month and year filter select -->
+    <q-select
+      class="q-pa-sm"
+      outlined
+      v-model="filterMonth"
+      :options="filterMonthOptions"
+      label="Filter month"
+      @update:model-value="getJourneyItem()"
+    />
+
+    <div
+      v-if="Object.keys(journeyItemList).length === 0"
+      class="text-center q-pa-md text-secondary text-bold text-primary"
+    >
+      <div>Add your journey record here</div>
+      <q-icon name="receipt_long" size="12rem" color="secondary"></q-icon>
+    </div>
+
+    <q-item v-for="(value, key) in journeyItemList" :key="key">
+      <div class="row items-start full-width">
+        <div class="col-3">
+          <div
+            class="
+              q-pa-md
+              rounded-borders
+              bg-secondary
+              text-h4 text-white text-center
+            "
+          >
+            {{ key.toString().slice(0, 2) }}
+          </div>
+        </div>
+        <div class="col-9">
+          <q-list class="q-ml-sm">
+            <journey-detail-item :list="value"></journey-detail-item>
+          </q-list>
         </div>
       </div>
-      <div class="col-9">
-        <q-list>
-          <journey-detail-item :list="value"></journey-detail-item>
-        </q-list>
-      </div>
-    </div>
-  </q-item>
+    </q-item>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent, onMounted, Ref, ref } from 'vue';
 import JourneyDetailItem from 'src/components/JourneyDetailItem.vue';
-import { useQuasar } from 'quasar';
+import { date } from 'quasar';
 import localforage from 'localforage';
 
 interface JourneyItem {
+  id: string;
   title: string;
   detail: string;
   category: string;
+  date: string;
 }
 
 interface JourneyList {
@@ -45,23 +67,56 @@ export default defineComponent({
   },
   setup() {
     const journeyItemList = ref<JourneyList>({});
+    const filterMonth = ref('');
+    const filterMonthOptions: Ref<string[]> = ref([]);
+
+    const userJourneyStore = localforage.createInstance({
+      name: 'userJourney',
+    });
 
     function getJourneyItem() {
-      const userJourneyStore = localforage.createInstance({
-        name: 'userJourney',
-      });
+      journeyItemList.value = {};
 
       userJourneyStore.iterate((value, key) => {
-        journeyItemList.value[key] = value as JourneyItem[];
+        const dateKey = date.extractDate(key, 'DD-MM-YYYY');
+        const formattedKey = date.formatDate(dateKey, 'MMMM YYYY');
+
+        // Filtering
+        if (formattedKey == filterMonth.value) {
+          journeyItemList.value[key] = value as JourneyItem[];
+        }
+      });
+    }
+
+    function generateMonthSelectOptions() {
+      userJourneyStore.keys().then((keys) => {
+        const formattedKeys = keys
+          .map((value) => {
+            const dateValue = date.extractDate(value, 'DD-MM-YYYY');
+            const formattedDate = date.formatDate(dateValue, 'MMMM YYYY');
+
+            return formattedDate;
+          })
+          // Filter unique month year option
+          .filter((value, index, array) => array.indexOf(value) === index)
+          .sort();
+
+        filterMonthOptions.value = formattedKeys;
       });
     }
 
     onMounted(() => {
+      filterMonth.value = date.formatDate(new Date(), 'MMMM YYYY');
+
+      generateMonthSelectOptions();
       getJourneyItem();
     });
 
     return {
       journeyItemList,
+      filterMonth,
+      filterMonthOptions,
+      getJourneyItem,
     };
   },
 });
