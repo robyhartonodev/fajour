@@ -65,6 +65,7 @@ interface JourneyItem {
 
 export default defineComponent({
   name: 'JourneyDetailItem',
+  emits: ['delete-item'],
   props: {
     list: {
       type: Array as PropType<JourneyItem[]>,
@@ -112,18 +113,30 @@ export default defineComponent({
 
         if (recordValue) {
           const newArrayValue = arrayValue.filter((i) => i.id != item.id);
-          userJourneyStore.setItem(item.date, newArrayValue);
 
-          if (newArrayValue.length == 0) {
-            userJourneyStore.removeItem(item.date);
+          // If length still not 0, then keep the key
+          if (newArrayValue.length > 0) {
+            userJourneyStore.setItem(item.date, newArrayValue).then(() => {
+              emit('delete-item');
+              quasar.notify({
+                message: 'Deleted successfully!',
+                color: 'secondary',
+                icon: 'check_circle',
+              });
+            });
           }
 
-          emit('delete-item');
-          quasar.notify({
-            message: 'Deleted successfully!',
-            color: 'secondary',
-            icon: 'check_circle',
-          });
+          // If length is 0, then delete the key as well
+          if (newArrayValue.length == 0) {
+            userJourneyStore.removeItem(item.date).then(() => {
+              emit('delete-item');
+              quasar.notify({
+                message: 'Deleted successfully!',
+                color: 'secondary',
+                icon: 'check_circle',
+              });
+            });
+          }
         }
       });
       openDialog.value = false;
