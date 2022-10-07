@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="text-h4 text-primary q-mt-md">
+    <div class="text-h4 text-primary q-my-md">
       {{ formMode == 'new' ? 'New' : 'Edit' }} Record
     </div>
 

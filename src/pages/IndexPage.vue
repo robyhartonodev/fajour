@@ -9,7 +9,11 @@
         icon="add_circle"
         size="lg"
         to="/new/journey"
-      />
+      >
+        <q-tooltip anchor="center left" self="center right">
+          New record
+        </q-tooltip>
+      </q-btn>
     </q-page-sticky>
   </q-page>
 </template>

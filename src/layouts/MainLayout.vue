@@ -44,13 +44,13 @@
         </q-item>
 
         <q-item style="position: absolute; bottom: 0">
-          <q-item-section> Made with ❤️ by Roby Hartono </q-item-section>
+          <q-item-section> Made by Roby Hartono ⛪</q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
 
     <q-page-container>
-        <router-view />
+      <router-view />
     </q-page-container>
   </q-layout>
 </template>
@@ -69,7 +69,7 @@ export default defineComponent({
     const drawerItemList = ref([
       { icon: 'home', content: 'Home', to: '/' },
       // { icon: 'accessibility', content: 'Thank God' },
-      // { icon: 'schedule', content: 'Schedule', to: '/schedule' },
+      { icon: 'schedule', content: 'Schedule', to: '/schedule' },
       { icon: 'settings', content: 'Settings', to: '/settings' },
     ]);
 

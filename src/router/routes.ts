@@ -46,6 +46,30 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
+    path: '/new/schedule',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'NewSchedule',
+        component: () => import('src/pages/ScheduleFormPage.vue'),
+      },
+    ],
+  },
+
+  {
+    path: '/edit/:id/schedule',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'EditSchedule',
+        component: () => import('src/pages/ScheduleFormPage.vue'),
+      },
+    ],
+  },
+
+  {
     path: '/settings',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/SettingsPage.vue') }],

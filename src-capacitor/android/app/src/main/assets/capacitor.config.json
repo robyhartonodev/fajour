@@ -4,5 +4,12 @@
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
-  "server": {}
+  "server": {},
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon_config_sample",
+      "iconColor": "#3f51b5",
+      "sound": "beep.wav"
+    }
+  }
 }
