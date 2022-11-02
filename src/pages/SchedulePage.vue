@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="text-primary text-h4 q-my-md">Schedules</div>
+    <div class="text-primary text-h4 q-my-md">Reminders</div>
 
     <q-list padding bordered separator>
       <q-item clickable v-ripple v-for="item in 20" :key="item">

@@ -3,7 +3,7 @@
     <!-- Month and year filter select -->
     <q-select
       class="q-pa-sm"
-      outlined
+      filled
       v-model="filterMonth"
       :options="filterMonthOptions"
       label="Filter month"

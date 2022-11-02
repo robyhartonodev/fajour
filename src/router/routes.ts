@@ -70,6 +70,36 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
+    path: '/basic-beliefs',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/BasicBeliefPage.vue') },
+    ],
+  },
+
+  {
+    path: '/basic-beliefs/chapter/:chapterId/question/:questionId',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/BasicBeliefDetailPage.vue') },
+    ],
+  },
+
+  {
+    path: '/bible',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/BiblePage.vue') }],
+  },
+
+  {
+    path: '/bible/chapter/:chapterId/verse/:verseId',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/BibleDetailPage.vue') },
+    ],
+  },
+
+  {
     path: '/settings',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/SettingsPage.vue') }],

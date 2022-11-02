@@ -71,13 +71,23 @@ export default defineComponent({
     }
 
     function removeJourneyRecords() {
-      userJourneyStore.clear().then(() => {
-        quasar.notify({
-          message: 'Reseted successfully!',
-          color: 'secondary',
-          icon: 'check_circle',
+      quasar
+        .dialog({
+          title: 'Confirm',
+          message:
+            'Would you like to reset your journey records? This operation is irreversible',
+          cancel: true,
+          persistent: false,
+        })
+        .onOk(() => {
+          userJourneyStore.clear().then(() => {
+            quasar.notify({
+              message: 'Reseted successfully!',
+              color: 'secondary',
+              icon: 'check_circle',
+            });
+          });
         });
-      });
     }
 
     onMounted(() => {

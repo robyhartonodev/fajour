@@ -44,7 +44,7 @@
         </q-item>
 
         <q-item style="position: absolute; bottom: 0">
-          <q-item-section> Made by Roby Hartono ⛪</q-item-section>
+          <q-item-section> Made by Roby Hartono </q-item-section>
         </q-item>
       </q-list>
     </q-drawer>
@@ -67,10 +67,26 @@ export default defineComponent({
     const leftDrawerOpen = ref(false);
 
     const drawerItemList = ref([
-      { icon: 'home', content: 'Home', to: '/' },
-      // { icon: 'accessibility', content: 'Thank God' },
-      { icon: 'schedule', content: 'Schedule', to: '/schedule' },
-      { icon: 'settings', content: 'Settings', to: '/settings' },
+      {
+        icon: 'home',
+        content: 'Home',
+        to: '/',
+      },
+      {
+        icon: 'menu_book',
+        content: 'Bible',
+        to: '/bible',
+      },
+      {
+        icon: 'psychology_alt',
+        content: 'Basic Beliefs (FAQ)',
+        to: '/basic-beliefs',
+      },
+      {
+        icon: 'settings',
+        content: 'Settings',
+        to: '/settings',
+      },
     ]);
 
     return {
