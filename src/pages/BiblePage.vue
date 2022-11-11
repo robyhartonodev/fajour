@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import BibleChapterVerseSelector from 'src/components/BibleChapterVerseSelector.vue';
 
 export default defineComponent({

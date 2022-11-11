@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar v-if="route.name != 'bible-page'">
         <q-btn
           flat
           dense
@@ -12,6 +12,46 @@
         />
 
         <q-toolbar-title> Fajour App </q-toolbar-title>
+      </q-toolbar>
+      <q-toolbar v-if="route.name == 'bible-page'">
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
+        <div>
+          <div v-if="!bibleStore.selectedVerse" class="q-mx-sm text-h6">
+            Bible
+          </div>
+          <div class="row items-center" v-if="bibleStore.selectedVerse">
+            <div>
+              <q-btn
+                flat
+                icon="chevron_left"
+                round
+                @click="bibleStore.setToPreviousChapter"
+              />
+            </div>
+            <div>
+              <q-btn
+                @click="bibleStore.resetState"
+                flat
+                :label="`${bibleStore.selectedBook?.name} ${bibleStore.selectedChapter?.num}`"
+              />
+            </div>
+            <div>
+              <q-btn
+                flat
+                icon="chevron_right"
+                round
+                @click="bibleStore.setToNextChapter"
+              />
+            </div>
+          </div>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -56,7 +96,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+import { useBibleStore } from 'src/stores/bible';
 
 export default defineComponent({
   name: 'MainLayout',
@@ -64,12 +107,22 @@ export default defineComponent({
   components: {},
 
   setup() {
+    const route = useRoute();
     const leftDrawerOpen = ref(false);
+    const appTitle = ref('Fajour App');
+
+    const bibleStore = useBibleStore();
+
+    onMounted(() => {
+      if (route.name == 'bible-page') {
+        appTitle.value = 'Bible';
+      }
+    });
 
     const drawerItemList = ref([
       {
         icon: 'home',
-        content: 'Home',
+        content: 'Reflections',
         to: '/',
       },
       {
@@ -83,6 +136,11 @@ export default defineComponent({
         to: '/basic-beliefs',
       },
       {
+        icon: 'edit_note',
+        content: 'Sermont Notes (Coming Soon...)',
+        to: '/notes/sermonts',
+      },
+      {
         icon: 'settings',
         content: 'Settings',
         to: '/settings',
@@ -90,11 +148,14 @@ export default defineComponent({
     ]);
 
     return {
+      appTitle,
       leftDrawerOpen,
       drawerItemList,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;
       },
+      route,
+      bibleStore,
     };
   },
 });

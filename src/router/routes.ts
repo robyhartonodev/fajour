@@ -88,7 +88,13 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/bible',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/BiblePage.vue') }],
+    children: [
+      {
+        path: '',
+        component: () => import('pages/BiblePage.vue'),
+        name: 'bible-page',
+      },
+    ],
   },
 
   {
