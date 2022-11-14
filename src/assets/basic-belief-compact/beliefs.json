@@ -1,0 +1,525 @@
+[
+  {
+    "id": 1,
+    "title": "One True God",
+    "points": [
+      {
+        "id": 1,
+        "title": "God's Nature and Essence",
+        "answers": [
+          {
+            "title": "Spirit",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          },
+          {
+            "title": "Self-existing",
+            "verses": [
+              {
+                "book": "Exodus",
+                "chapter": 3,
+                "verseFrom": 14,
+                "verseTo": null
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 7,
+                "verseFrom": 3,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Eternal",
+            "verses": [
+              {
+                "book": "Isaiah",
+                "chapter": 40,
+                "verseFrom": 28,
+                "verseTo": null
+              },
+              {
+                "book": "Isaiah",
+                "chapter": 44,
+                "verseFrom": 6,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Transcendent",
+            "verses": [
+              { "book": "Psalm", "chapter": 113, "verseFrom": 4, "verseTo": 6 },
+              {
+                "book": "1 Kings",
+                "chapter": 8,
+                "verseFrom": 27,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Immanent",
+            "verses": [
+              {
+                "book": "Ephesians",
+                "chapter": 1,
+                "verseFrom": 23,
+                "verseTo": null
+              },
+              {
+                "book": "Ephesians",
+                "chapter": 4,
+                "verseFrom": 6,
+                "verseTo": null
+              },
+              { "book": "Acts", "chapter": 17, "verseFrom": 26, "verseTo": 28 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "God's Characteristics",
+        "answers": [
+          {
+            "title": "Omnipresent",
+            "verses": [
+              { "book": "Psalm", "chapter": 139, "verseFrom": 7, "verseTo": 12 }
+            ]
+          },
+          {
+            "title": "Allmighty",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 19,
+                "verseFrom": 26,
+                "verseTo": null
+              },
+              {
+                "book": "Jeremiah",
+                "chapter": 32,
+                "verseFrom": 17,
+                "verseTo": null
+              },
+              {
+                "book": "Jeremiah",
+                "chapter": 32,
+                "verseFrom": 27,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "All-knowing",
+            "verses": [
+              {
+                "book": "Hebrews",
+                "chapter": 4,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              { "book": "Psalm", "chapter": 139, "verseFrom": 1, "verseTo": 4 }
+            ]
+          },
+          {
+            "title": "Holy",
+            "verses": [
+              {
+                "book": "Leviticus",
+                "chapter": 11,
+                "verseFrom": 44,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 99,
+                "verseFrom": 5,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Jealous",
+            "verses": [
+              {
+                "book": "Exodus",
+                "chapter": 34,
+                "verseFrom": 14,
+                "verseTo": null
+              },
+              {
+                "book": "Deuteronomy",
+                "chapter": 4,
+                "verseFrom": 24,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Loving",
+            "verses": [
+              {
+                "book": "1 John",
+                "chapter": 4,
+                "verseFrom": 8,
+                "verseTo": null
+              },
+              {
+                "book": "1 John",
+                "chapter": 4,
+                "verseFrom": 16,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Faithful",
+            "verses": [
+              {
+                "book": "Deuteronomy",
+                "chapter": 7,
+                "verseFrom": 9,
+                "verseTo": null
+              },
+              {
+                "book": "1 Corinthians",
+                "chapter": 1,
+                "verseFrom": 9,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Righteous",
+            "verses": [
+              {
+                "book": "Deuteronomy",
+                "chapter": 32,
+                "verseFrom": 4,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 97,
+                "verseFrom": 2,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Compassionate",
+            "verses": [
+              {
+                "book": "Psalm",
+                "chapter": 86,
+                "verseFrom": 15,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 145,
+                "verseFrom": 8,
+                "verseTo": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "God's role in the creation",
+        "answers": [
+          {
+            "title": "Creator",
+            "verses": [
+              {
+                "book": "Genesis",
+                "chapter": 1,
+                "verseFrom": 1,
+                "verseTo": null
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 3,
+                "verseFrom": 4,
+                "verseTo": null
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 11,
+                "verseFrom": 3,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Ruler",
+            "verses": [
+              {
+                "book": "2 Chronicles",
+                "chapter": 20,
+                "verseFrom": 6,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 95,
+                "verseFrom": 3,
+                "verseTo": 7
+              },
+              {
+                "book": "Psalm",
+                "chapter": 103,
+                "verseFrom": 19,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Saviour",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 3,
+                "verseFrom": 16,
+                "verseTo": 17
+              },
+              {
+                "book": "Titus",
+                "chapter": 2,
+                "verseFrom": 13,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Judge",
+            "verses": [
+              {
+                "book": "Psalm",
+                "chapter": 96,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 17,
+                "verseFrom": 31,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Divinity of Jesus",
+        "answers": [
+          {
+            "title": "Creator",
+            "verses": [
+              {
+                "book": "Colossians",
+                "chapter": 1,
+                "verseFrom": 15,
+                "verseTo": 16
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 1,
+                "verseFrom": 10,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "God's Incarnation",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 1,
+                "verseFrom": 14,
+                "verseTo": null
+              },
+              {
+                "book": "Colossians",
+                "chapter": 2,
+                "verseFrom": 9,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "God's name",
+            "verses": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Bible",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Church",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Baptism",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Holy Spirit",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Footwashing",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Holy Communion",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Sabbath",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Salvation",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Second Coming of Christ",
+    "points": [
+      {
+        "id": 1,
+        "title": "",
+        "answers": [
+          {
+            "title": "",
+            "verses": [
+              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

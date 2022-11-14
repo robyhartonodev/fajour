@@ -130,16 +130,16 @@ export default defineComponent({
         content: 'Reflections',
         to: '/reflections',
       },
-      {
-        icon: 'question_mark',
-        content: 'Basic Beliefs (FAQ)',
-        to: '/basic-beliefs',
-      },
-      {
-        icon: 'edit_note',
-        content: 'Sermont Notes (Coming Soon...)',
-        to: '/notes/sermonts',
-      },
+      // {
+      //   icon: 'question_mark',
+      //   content: 'Basic Beliefs (FAQ)',
+      //   to: '/basic-beliefs',
+      // },
+      // {
+      //   icon: 'edit_note',
+      //   content: 'Sermont Notes (Coming Soon...)',
+      //   to: '/notes/sermonts',
+      // },
       {
         icon: 'settings',
         content: 'Settings',
