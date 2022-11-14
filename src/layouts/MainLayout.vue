@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Fajour App </q-toolbar-title>
+        <q-toolbar-title> {{ appTitle }} </q-toolbar-title>
       </q-toolbar>
       <q-toolbar v-if="route.name == 'bible-page'">
         <q-btn
@@ -24,7 +24,7 @@
         />
         <div>
           <div v-if="!bibleStore.selectedVerse" class="q-mx-sm text-h6">
-            Bible
+            {{ appTitle }}
           </div>
           <div class="row items-center" v-if="bibleStore.selectedVerse">
             <div>
@@ -115,23 +115,23 @@ export default defineComponent({
 
     onMounted(() => {
       if (route.name == 'bible-page') {
-        appTitle.value = 'Bible';
+        appTitle.value = 'Bible (NKJV)';
       }
     });
 
     const drawerItemList = ref([
       {
-        icon: 'home',
-        content: 'Reflections',
+        icon: 'menu_book',
+        content: 'Bible',
         to: '/',
       },
       {
-        icon: 'menu_book',
-        content: 'Bible',
-        to: '/bible',
+        icon: 'psychology',
+        content: 'Reflections',
+        to: '/reflections',
       },
       {
-        icon: 'psychology_alt',
+        icon: 'question_mark',
         content: 'Basic Beliefs (FAQ)',
         to: '/basic-beliefs',
       },

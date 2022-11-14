@@ -49,6 +49,8 @@ import chapterOneJson from 'src/assets/basic-beliefs/chapter1.json';
 import chapterTwoJson from 'src/assets/basic-beliefs/chapter2.json';
 import chapterThreeJson from 'src/assets/basic-beliefs/chapter3.json';
 import chapterFourJson from 'src/assets/basic-beliefs/chapter4.json';
+import chapterFiveJson from 'src/assets/basic-beliefs/chapter5.json';
+import chapterSixJson from 'src/assets/basic-beliefs/chapter6.json';
 
 interface QuestionItem {
   id: number;
@@ -74,6 +76,8 @@ export default defineComponent({
       chapterTwoJson,
       chapterThreeJson,
       chapterFourJson,
+      chapterFiveJson,
+      chapterSixJson,
     ];
 
     function getQuestionItem() {

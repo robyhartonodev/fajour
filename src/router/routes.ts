@@ -12,6 +12,18 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('pages/BiblePage.vue'),
+        name: 'bible-page',
+      },
+    ],
+  },
+
+  {
+    path: '/reflections',
+    component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
   },
 
@@ -85,25 +97,25 @@ const routes: RouteRecordRaw[] = [
     ],
   },
 
-  {
-    path: '/bible',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      {
-        path: '',
-        component: () => import('pages/BiblePage.vue'),
-        name: 'bible-page',
-      },
-    ],
-  },
+  // {
+  //   path: '/bible',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: () => import('pages/BiblePage.vue'),
+  //       name: 'bible-page',
+  //     },
+  //   ],
+  // },
 
-  {
-    path: '/bible/chapter/:chapterId/verse/:verseId',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/BibleDetailPage.vue') },
-    ],
-  },
+  // {
+  //   path: '/bible/chapter/:chapterId/verse/:verseId',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/BibleDetailPage.vue') },
+  //   ],
+  // },
 
   {
     path: '/settings',

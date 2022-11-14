@@ -6,18 +6,22 @@
     v-ripple
     v-touch-hold:300.mouse="() => onItemClick()"
   >
-    <q-card-section>
+    <div>
       <q-item clickable>
         <q-item-section>
-          <q-item-label>{{ item.title }}</q-item-label>
-          <q-item-label caption lines="2">{{ item.detail }}</q-item-label>
+          <q-item-label style="word-wrap: break-word">
+            {{ item.title }}
+          </q-item-label>
+          <q-item-label caption lines="2" style="word-wrap: break-word">
+            {{ item.detail }}
+          </q-item-label>
         </q-item-section>
 
         <q-item-section side>
           <q-icon :name="getIconString(item.category)" color="primary" />
         </q-item-section>
       </q-item>
-    </q-card-section>
+    </div>
 
     <q-dialog v-model="openDialog">
       <q-card style="width: 700px; max-width: 80vw">

@@ -167,7 +167,7 @@ export default defineComponent({
             userJourneyStore.setItem(itemDate.value, arrayObject);
           }
 
-          router.push('/');
+          router.push('/reflections');
           quasar.notify({
             message: 'Created successfully!',
             color: 'secondary',
@@ -192,7 +192,7 @@ export default defineComponent({
             userJourneyStore.setItem(itemDate.value, arrayObject);
           }
 
-          router.push('/');
+          router.push('/reflections');
           quasar.notify({
             message: 'Edited successfully!',
             color: 'secondary',

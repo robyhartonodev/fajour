@@ -28,25 +28,6 @@
         v-for="(chapter, indexChapter) in chapterList"
         :key="indexChapter"
       >
-        <!-- Version 1 -->
-        <!-- <q-expansion-item
-          v-for="(question, indexQuestion) in chapter.questions"
-          class="text-justify"
-          :key="indexQuestion"
-          :label="question.title"
-          :caption="`Question 1.${question.id}`"
-        >
-          <q-list separator bordered>
-            <q-item
-              v-for="(answer, indexAnswer) in question.answers"
-              :key="indexAnswer"
-            >
-              <q-item-section class="text-justify">
-                {{ answer }}
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-expansion-item> -->
         <q-list separator>
           <q-item
             v-for="(question, indexQuestion) in chapter.questions"
@@ -75,6 +56,8 @@ import chapterOneJson from 'src/assets/basic-beliefs/chapter1.json';
 import chapterTwoJson from 'src/assets/basic-beliefs/chapter2.json';
 import chapterThreeJson from 'src/assets/basic-beliefs/chapter3.json';
 import chapterFourJson from 'src/assets/basic-beliefs/chapter4.json';
+import chapterFiveJson from 'src/assets/basic-beliefs/chapter5.json';
+import chapterSixJson from 'src/assets/basic-beliefs/chapter6.json';
 
 export default defineComponent({
   name: 'BasicBeliefPage',
@@ -86,6 +69,8 @@ export default defineComponent({
       chapterTwoJson,
       chapterThreeJson,
       chapterFourJson,
+      chapterFiveJson,
+      chapterSixJson,
     ];
 
     onMounted(() => {
@@ -94,7 +79,6 @@ export default defineComponent({
 
     return {
       searchText,
-      chapterOneJson,
       chapterList,
     };
   },

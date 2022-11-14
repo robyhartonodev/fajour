@@ -6,7 +6,7 @@
       filled
       v-model="filterMonth"
       :options="filterMonthOptions"
-      label="Filter month"
+      label="Month"
       @update:model-value="getJourneyItem()"
     />
 
@@ -20,20 +20,18 @@
 
     <q-item v-for="(value, key) in journeyItemList" :key="key">
       <div class="row items-start full-width">
-        <div class="col-3">
-          <div
-            class="
-              q-pa-md
-              rounded-borders
-              bg-secondary
-              text-h4 text-white text-center
-            "
-          >
-            {{ key.toString().slice(0, 2) }}
+        <div class="col-12 q-mb-sm">
+          <div class="q-pa-md bg-secondary text-h5 text-white text-center">
+            <div>
+              {{ key.toString().slice(0, 2) }}
+            </div>
+            <div>
+              {{ filterMonth.slice(0, 3).toUpperCase() }}
+            </div>
           </div>
         </div>
-        <div class="col-9">
-          <q-list class="q-ml-sm">
+        <div class="col-12">
+          <q-list>
             <journey-detail-item
               :list="value"
               @delete-item="getJourneyItem()"
