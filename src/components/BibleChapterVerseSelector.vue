@@ -66,7 +66,7 @@
         >
           <q-btn
             outline
-            color="primary"
+            color="secondary"
             :label="book.name"
             class="q-mt-sm w-full"
             @click="bibleStore.setBook(book)"

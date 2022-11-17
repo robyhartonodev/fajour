@@ -354,7 +354,82 @@
           },
           {
             "title": "God's name",
-            "verses": []
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 5,
+                "verseFrom": 43,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 17,
+                "verseFrom": 11,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "The only saviour",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 4,
+                "verseFrom": 10,
+                "verseTo": 12
+              },
+              {
+                "book": "John",
+                "chapter": 14,
+                "verseFrom": 6,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Resurrected Christ",
+            "verses": [
+              {
+                "book": "Romans",
+                "chapter": 1,
+                "verseFrom": 4,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 2,
+                "verseFrom": 32,
+                "verseTo": 33
+              }
+            ]
+          },
+          {
+            "title": "Judge",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 10,
+                "verseFrom": 42,
+                "verseTo": null
+              },
+              {
+                "book": "2 Timothy",
+                "chapter": 4,
+                "verseFrom": 8,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "King of all kings",
+            "verses": [
+              {
+                "book": "Revelation",
+                "chapter": 17,
+                "verseFrom": 14,
+                "verseTo": null
+              }
+            ]
           }
         ]
       }
@@ -366,12 +441,217 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "Bible's authority",
         "answers": [
           {
-            "title": "",
+            "title": "Given by God",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "2 Timothy",
+                "chapter": 3,
+                "verseFrom": 16,
+                "verseTo": null
+              },
+              {
+                "book": "2 Peter",
+                "chapter": 1,
+                "verseFrom": 20,
+                "verseTo": 21
+              }
+            ]
+          },
+          {
+            "title": "Infallible",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 5,
+                "verseFrom": 18,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 19,
+                "verseFrom": 8,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 119,
+                "verseFrom": 89,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Word of life, living",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 1,
+                "verseFrom": 1,
+                "verseTo": 2
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 4,
+                "verseFrom": 12,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "How to read and understand the Bible?",
+        "answers": [
+          {
+            "title": "Accept the word",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 17,
+                "verseFrom": 11,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 1,
+                "verseFrom": 2,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 119,
+                "verseFrom": 97,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Let God and His Spirit help",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 2,
+                "verseFrom": 11,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 16,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "1 John",
+                "chapter": 2,
+                "verseFrom": 27,
+                "verseTo": null
+              },
+              {
+                "book": "Ephesians",
+                "chapter": 1,
+                "verseFrom": 16,
+                "verseTo": 18
+              }
+            ]
+          },
+          {
+            "title": "Take the word to heart",
+            "verses": [
+              {
+                "book": "Deuteronomy",
+                "chapter": 6,
+                "verseFrom": 6,
+                "verseTo": 7
+              },
+              {
+                "book": "Psalm",
+                "chapter": 119,
+                "verseFrom": 97,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Do the word",
+            "verses": [
+              {
+                "book": "James",
+                "chapter": 1,
+                "verseFrom": 22,
+                "verseTo": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "How does it work?",
+        "answers": [
+          {
+            "title": "Gives orientation on our path through life",
+            "verses": [
+              {
+                "book": "Psalm",
+                "chapter": 119,
+                "verseFrom": 105,
+                "verseTo": null
+              },
+              {
+                "book": "Psalm",
+                "chapter": 119,
+                "verseFrom": 133,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Tests our thoughts",
+            "verses": [
+              {
+                "book": "Hebrews",
+                "chapter": 4,
+                "verseFrom": 12,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Changes our life",
+            "verses": [
+              {
+                "book": "2 Timothy",
+                "chapter": 3,
+                "verseFrom": 16,
+                "verseTo": 17
+              }
+            ]
+          },
+          {
+            "title": "Saves and gives life",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 5,
+                "verseFrom": 39,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 6,
+                "verseFrom": 63,
+                "verseTo": null
+              },
+              {
+                "book": "James",
+                "chapter": 1,
+                "verseFrom": 21,
+                "verseTo": null
+              }
             ]
           }
         ]
@@ -384,12 +664,209 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "What is the church?",
         "answers": [
           {
-            "title": "",
+            "title": "The community of the redeemed",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "Acts",
+                "chapter": 20,
+                "verseFrom": 28,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Body of Christ",
+            "verses": [
+              {
+                "book": "Ephesians",
+                "chapter": 4,
+                "verseFrom": 24,
+                "verseTo": null
+              },
+              {
+                "book": "Colossians",
+                "chapter": 1,
+                "verseFrom": 24,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Characteristics of the true church",
+        "answers": [
+          {
+            "title": "Proclaims the Word of God",
+            "verses": [
+              {
+                "book": "1 Timothy",
+                "chapter": 3,
+                "verseFrom": 15,
+                "verseTo": null
+              },
+              {
+                "book": "Ephesians",
+                "chapter": 2,
+                "verseFrom": 19,
+                "verseTo": 22
+              }
+            ]
+          },
+          {
+            "title": "Their doctrine corresponds to the Bible",
+            "verses": [
+              {
+                "book": "2 Timothy",
+                "chapter": 1,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 8,
+                "verseFrom": 31,
+                "verseTo": 32
+              },
+              {
+                "book": "2 John",
+                "chapter": 1,
+                "verseFrom": 9,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "In it is the spirit of Christ",
+            "verses": [
+              {
+                "book": "James",
+                "chapter": 2,
+                "verseFrom": 26,
+                "verseTo": null
+              },
+              {
+                "book": "Romans",
+                "chapter": 8,
+                "verseFrom": 9,
+                "verseTo": null
+              },
+              {
+                "book": "1 Corinthians",
+                "chapter": 12,
+                "verseFrom": 4,
+                "verseTo": null
+              },
+              {
+                "book": "1 Corinthians",
+                "chapter": 12,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 20,
+                "verseFrom": 22,
+                "verseTo": 23
+              },
+              {
+                "book": "1 John",
+                "chapter": 5,
+                "verseFrom": 6,
+                "verseTo": 8
+              }
+            ]
+          },
+          {
+            "title": "In it the word is confirmed by signs and wonders affirmed",
+            "verses": [
+              {
+                "book": "Mark",
+                "chapter": 16,
+                "verseFrom": 17,
+                "verseTo": 20
+              },
+              {
+                "book": "Matthew",
+                "chapter": 11,
+                "verseFrom": 2,
+                "verseTo": 6
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 2,
+                "verseFrom": 3,
+                "verseTo": 4
+              },
+              { "book": "Acts", "chapter": 14, "verseFrom": 3, "verseTo": null }
+            ]
+          },
+          {
+            "title": "In it is knowledge of Christ ",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 8,
+                "verseFrom": 31,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 15,
+                "verseFrom": 8,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 13,
+                "verseFrom": 35,
+                "verseTo": null
+              },
+              {
+                "book": "Ephesians",
+                "chapter": 4,
+                "verseFrom": 11,
+                "verseTo": 16
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Mission of the church",
+        "answers": [
+          {
+            "title": "Proclamation of the Gospel",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 28,
+                "verseFrom": 19,
+                "verseTo": 20
+              },
+              {
+                "book": "Acts",
+                "chapter": 1,
+                "verseFrom": 8,
+                "verseTo": null
+              },
+              {
+                "book": "Romans",
+                "chapter": 10,
+                "verseFrom": 14,
+                "verseTo": 15
+              }
+            ]
+          },
+          {
+            "title": "'Tend, Feed' the members",
+            "verses": [
+              { "book": "John", "chapter": 21, "verseFrom": 15, "verseTo": 17 }
             ]
           }
         ]
@@ -402,12 +879,203 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "The purification takes place through",
         "answers": [
           {
-            "title": "",
+            "title": "The blood of Jesus",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "Revelation",
+                "chapter": 1,
+                "verseFrom": 5,
+                "verseTo": null
+              },
+              {
+                "book": "1 Peter",
+                "chapter": 1,
+                "verseFrom": 18,
+                "verseTo": 19
+              }
+            ]
+          },
+          {
+            "title": "The unity of blood, water and spirit",
+            "verses": [
+              { "book": "1 John", "chapter": 5, "verseFrom": 6, "verseTo": 8 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Effect of baptism",
+        "answers": [
+          {
+            "title": "Forgiveness of sins",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 2,
+                "verseFrom": 38,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 22,
+                "verseFrom": 16,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Rebirth",
+            "verses": [
+              {
+                "book": "Titus",
+                "chapter": 3,
+                "verseFrom": 5,
+                "verseTo": null
+              },
+              {
+                "book": "Romans",
+                "chapter": 6,
+                "verseFrom": 3,
+                "verseTo": 4
+              },
+              {
+                "book": "John",
+                "chapter": 3,
+                "verseFrom": 5,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Salvation",
+            "verses": [
+              {
+                "book": "Mark",
+                "chapter": 16,
+                "verseFrom": 16,
+                "verseTo": null
+              },
+              {
+                "book": "1 Peter",
+                "chapter": 3,
+                "verseFrom": 21,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Attainment of the sonship of God",
+            "verses": [
+              {
+                "book": "Galatians",
+                "chapter": 3,
+                "verseFrom": 26,
+                "verseTo": 29
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Mode of the baptism",
+        "answers": [
+          {
+            "title": "The baptist: Member of the true church",
+            "verses": [
+              {
+                "book": "Mark",
+                "chapter": 16,
+                "verseFrom": 18,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "The baptist: Has received the Holy Spirit",
+            "verses": [
+              { "book": "John", "chapter": 20, "verseFrom": 21, "verseTo": 23 }
+            ]
+          },
+          {
+            "title": "The baptized: Believes",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 16,
+                "verseFrom": 16,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "The baptized: Repents",
+            "verses": [
+              { "book": "Acts", "chapter": 18, "verseFrom": 8, "verseTo": null }
+            ]
+          },
+          {
+            "title": "In the name of Jesus",
+            "verses": [
+              { "book": "Acts", "chapter": 2, "verseFrom": 38, "verseTo": null }
+            ]
+          },
+          {
+            "title": "With bowed head",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 10,
+                "verseFrom": 48,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Complete immersion",
+            "verses": [
+              { "book": "Mark", "chapter": 1, "verseFrom": 9, "verseTo": 10 },
+              { "book": "Acts", "chapter": 8, "verseFrom": 38, "verseTo": 39 },
+              { "book": "John", "chapter": 3, "verseFrom": 23, "verseTo": null }
+            ]
+          },
+          {
+            "title": "In natural flowing water",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 3,
+                "verseFrom": 23,
+                "verseTo": null
+              },
+              {
+                "book": "Micah",
+                "chapter": 7,
+                "verseFrom": 19,
+                "verseTo": null
+              },
+              {
+                "book": "Zechariah",
+                "chapter": 13,
+                "verseFrom": 1,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Once in a lifetime",
+            "verses": [
+              { "book": "Hebrews", "chapter": 6, "verseFrom": 4, "verseTo": 8 },
+              {
+                "book": "Hebrews",
+                "chapter": 10,
+                "verseFrom": 26,
+                "verseTo": 31
+              }
             ]
           }
         ]
@@ -420,12 +1088,255 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "What is the Holy Spirit?",
         "answers": [
           {
-            "title": "",
+            "title": "The Spirit of God and Jesus",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "Romans",
+                "chapter": 8,
+                "verseFrom": 9,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "How does the Holy Spirit work?",
+        "answers": [
+          {
+            "title": "Works justification",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 6,
+                "verseFrom": 11,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Works sanctification",
+            "verses": [
+              {
+                "book": "2 Thessalonians",
+                "chapter": 2,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "Romans",
+                "chapter": 15,
+                "verseFrom": 16,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Testifies to the sonship of God",
+            "verses": [
+              { "book": "Romans", "chapter": 8, "verseFrom": 15, "verseTo": 16 }
+            ]
+          },
+          {
+            "title": "Reveals the truth",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 14,
+                "verseFrom": 26,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 16,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "1 Corinthians",
+                "chapter": 2,
+                "verseFrom": 10,
+                "verseTo": 11
+              }
+            ]
+          },
+          {
+            "title": "Gives victory over sin",
+            "verses": [
+              {
+                "book": "Romans",
+                "chapter": 8,
+                "verseFrom": 2,
+                "verseTo": null
+              },
+              {
+                "book": "Romans",
+                "chapter": 8,
+                "verseFrom": 13,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Does intercession",
+            "verses": [
+              { "book": "Romans", "chapter": 8, "verseFrom": 26, "verseTo": 27 }
+            ]
+          },
+          {
+            "title": "Gives power from above",
+            "verses": [
+              { "book": "Acts", "chapter": 1, "verseFrom": 8, "verseTo": null },
+              {
+                "book": "Ephesians",
+                "chapter": 3,
+                "verseFrom": 16,
+                "verseTo": null
+              },
+              {
+                "book": "Luke",
+                "chapter": 24,
+                "verseFrom": 49,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Gives witness to Jesus' resurrection",
+            "verses": [
+              { "book": "Acts", "chapter": 2, "verseFrom": 32, "verseTo": 33 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Renewal through the Holy Spirit",
+        "answers": [
+          {
+            "title": "Receiving the Holy Spirit",
+            "verses": [
+              { "book": "Acts", "chapter": 2, "verseFrom": 38, "verseTo": null }
+            ]
+          },
+          {
+            "title": "Receiving the Holy Spirit: speak in tongues",
+            "verses": [
+              { "book": "Acts", "chapter": 10, "verseFrom": 44, "verseTo": 46 },
+              { "book": "Acts", "chapter": 2, "verseFrom": 1, "verseTo": 4 },
+              { "book": "Acts", "chapter": 19, "verseFrom": 6, "verseTo": null }
+            ]
+          },
+          {
+            "title": "Receiving the Holy Spirit: is visible and audible",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 2,
+                "verseFrom": 33,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 8,
+                "verseFrom": 18,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Renewal through the Spirit",
+            "verses": [
+              {
+                "book": "Titus",
+                "chapter": 3,
+                "verseFrom": 5,
+                "verseTo": 7
+              },
+              {
+                "book": "Ezekiel",
+                "chapter": 36,
+                "verseFrom": 26,
+                "verseTo": 27
+              }
+            ]
+          },
+          {
+            "title": "Life in the Spirit",
+            "verses": [
+              {
+                "book": "Galatians",
+                "chapter": 5,
+                "verseFrom": 25,
+                "verseTo": null
+              },
+              {
+                "book": "Romans",
+                "chapter": 8,
+                "verseFrom": 4,
+                "verseTo": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "How do you receive the Holy Spirit?",
+        "answers": [
+          {
+            "title": "Believe in God and his word",
+            "verses": [
+              {
+                "book": "Galatians",
+                "chapter": 3,
+                "verseFrom": 14,
+                "verseTo": null
+              },
+              {
+                "book": "Ephesians",
+                "chapter": 1,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "Mark",
+                "chapter": 11,
+                "verseFrom": 24,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Repent and be baptized",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 2,
+                "verseFrom": 38,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 9,
+                "verseFrom": 31,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "'Persitently' ask for it",
+            "verses": [
+              {
+                "book": "Luke",
+                "chapter": 11,
+                "verseFrom": 8,
+                "verseTo": 13
+              }
             ]
           }
         ]
@@ -438,12 +1349,48 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "Origin of the footwashing",
         "answers": [
           {
-            "title": "",
+            "title": "A commandment of Jesus",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              { "book": "John", "chapter": 13, "verseFrom": 14, "verseTo": 17 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Effect of footwashing",
+        "answers": [
+          {
+            "title": "Have part in the Lord",
+            "verses": [
+              { "book": "John", "chapter": 13, "verseFrom": 8, "verseTo": null }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Meaning of footwashing",
+        "answers": [
+          {
+            "title": "Shows Jesus' great and perfect love",
+            "verses": [
+              { "book": "John", "chapter": 13, "verseFrom": 1, "verseTo": null }
+            ]
+          },
+          {
+            "title": "An example of humility and mutual love",
+            "verses": [
+              { "book": "John", "chapter": 13, "verseFrom": 12, "verseTo": 14 },
+              {
+                "book": "John",
+                "chapter": 13,
+                "verseFrom": 34,
+                "verseTo": null
+              }
             ]
           }
         ]
@@ -456,12 +1403,181 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "Origin of the Holy Communion",
         "answers": [
           {
-            "title": "",
+            "title": "Appointed by the Lord",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "Matthew",
+                "chapter": 26,
+                "verseFrom": 26,
+                "verseTo": 29
+              }
+            ]
+          },
+          {
+            "title": "Commanded by the Lord",
+            "verses": [
+              {
+                "book": "Luke",
+                "chapter": 22,
+                "verseFrom": 19,
+                "verseTo": null
+              },
+              {
+                "book": "1 Corinthians",
+                "chapter": 11,
+                "verseFrom": 25,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "At the Holy Communion",
+        "answers": [
+          {
+            "title": "We commemorate the Lord's death",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 11,
+                "verseFrom": 24,
+                "verseTo": 26
+              }
+            ]
+          },
+          {
+            "title": "We have fellowship with Christ and his church",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 10,
+                "verseFrom": 16,
+                "verseTo": 17
+              }
+            ]
+          },
+          {
+            "title": "We receive life in Jesus",
+            "verses": [
+              { "book": "John", "chapter": 6, "verseFrom": 53, "verseTo": null }
+            ]
+          },
+          {
+            "title": "We have part in the resurrection",
+            "verses": [
+              { "book": "John", "chapter": 6, "verseFrom": 54, "verseTo": null }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Components of the Holy Communion",
+        "answers": [
+          {
+            "title": "Bread: The body of the Lord",
+            "verses": [
+              {
+                "book": "Luke",
+                "chapter": 22,
+                "verseFrom": 19,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Bread: One bread",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 10,
+                "verseFrom": 16,
+                "verseTo": 17
+              }
+            ]
+          },
+          {
+            "title": "Bread: Unleavened bread",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 5,
+                "verseFrom": 6,
+                "verseTo": 8
+              },
+              {
+                "book": "Matthew",
+                "chapter": 16,
+                "verseFrom": 5,
+                "verseTo": 12
+              }
+            ]
+          },
+          {
+            "title": "Cup: the blood of the Lord",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 26,
+                "verseFrom": 28,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Grape juice",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 26,
+                "verseFrom": 29,
+                "verseTo": null
+              },
+              {
+                "book": "Leviticus",
+                "chapter": 10,
+                "verseFrom": 8,
+                "verseTo": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Prerequisite for participation",
+        "answers": [
+          {
+            "title": "Baptism",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 5,
+                "verseFrom": 7,
+                "verseTo": 8
+              },
+              {
+                "book": "Exodus",
+                "chapter": 12,
+                "verseFrom": 43,
+                "verseTo": 45
+              }
+            ]
+          },
+          {
+            "title": "Self-examination",
+            "verses": [
+              {
+                "book": "1 Corinthians",
+                "chapter": 11,
+                "verseFrom": 27,
+                "verseTo": 29
+              }
             ]
           }
         ]
@@ -474,12 +1590,261 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "Origin of the Sabbath",
         "answers": [
           {
-            "title": "",
+            "title": "Appointed by God",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              { "book": "Genesis", "chapter": 2, "verseFrom": 1, "verseTo": 3 }
+            ]
+          },
+          {
+            "title": "Commanded by God",
+            "verses": [
+              {
+                "book": "Exodus",
+                "chapter": 16,
+                "verseFrom": 23,
+                "verseTo": null
+              },
+              {
+                "book": "Exodus",
+                "chapter": 20,
+                "verseFrom": 8,
+                "verseTo": 11
+              }
+            ]
+          },
+          {
+            "title": "God's Covenant with Man",
+            "verses": [
+              {
+                "book": "Ezekiel",
+                "chapter": 20,
+                "verseFrom": 12,
+                "verseTo": null
+              },
+              {
+                "book": "Ezekiel",
+                "chapter": 20,
+                "verseFrom": 19,
+                "verseTo": 21
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Generality of the Sabbath",
+        "answers": [
+          {
+            "title": "Made for the man",
+            "verses": [
+              { "book": "Mark", "chapter": 2, "verseFrom": 27, "verseTo": null }
+            ]
+          },
+          {
+            "title": "Part of the ten commandments",
+            "verses": [
+              { "book": "Exodus", "chapter": 20, "verseFrom": 8, "verseTo": 11 }
+            ]
+          },
+          {
+            "title": "The day of the lord",
+            "verses": [
+              {
+                "book": "Leviticus",
+                "chapter": 19,
+                "verseFrom": 3,
+                "verseTo": null
+              },
+              {
+                "book": "Leviticus",
+                "chapter": 19,
+                "verseFrom": 3,
+                "verseTo": 30
+              },
+              {
+                "book": "Leviticus",
+                "chapter": 26,
+                "verseFrom": 2,
+                "verseTo": null
+              },
+              {
+                "book": "Matthew",
+                "chapter": 12,
+                "verseFrom": 8,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "For all nations",
+            "verses": [
+              { "book": "Isaiah", "chapter": 56, "verseFrom": 6, "verseTo": 7 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Sabbath observance in the New Testament",
+        "answers": [
+          {
+            "title": "Through Jesus",
+            "verses": [
+              {
+                "book": "Luke",
+                "chapter": 4,
+                "verseFrom": 16,
+                "verseTo": null
+              },
+              {
+                "book": "Luke",
+                "chapter": 13,
+                "verseFrom": 10,
+                "verseTo": null
+              },
+              {
+                "book": "Mark",
+                "chapter": 6,
+                "verseFrom": 2,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Through the disciples",
+            "verses": [
+              { "book": "Luke", "chapter": 23, "verseFrom": 55, "verseTo": 56 }
+            ]
+          },
+          {
+            "title": "Through the church",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 15,
+                "verseFrom": 21,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Through the apostle Paul",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 13,
+                "verseFrom": 13,
+                "verseTo": 14
+              },
+              {
+                "book": "Acts",
+                "chapter": 16,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 17,
+                "verseFrom": 1,
+                "verseTo": 2
+              },
+              {
+                "book": "Acts",
+                "chapter": 18,
+                "verseFrom": 4,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "How to keep the Sabbath",
+        "answers": [
+          {
+            "title": "Honor the day",
+            "verses": [
+              {
+                "book": "Genesis",
+                "chapter": 2,
+                "verseFrom": 3,
+                "verseTo": null
+              },
+              {
+                "book": "Isaiah",
+                "chapter": 58,
+                "verseFrom": 13,
+                "verseTo": 14
+              }
+            ]
+          },
+          {
+            "title": "Commemorate God's creation",
+            "verses": [
+              {
+                "book": "Exodus",
+                "chapter": 20,
+                "verseFrom": 11,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Rest from worldly matters",
+            "verses": [
+              { "book": "Exodus", "chapter": 20, "verseFrom": 8, "verseTo": 11 }
+            ]
+          },
+          {
+            "title": "Hearing God's Word",
+            "verses": [
+              {
+                "book": "Luke",
+                "chapter": 4,
+                "verseFrom": 16,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 13,
+                "verseFrom": 44,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 15,
+                "verseFrom": 21,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Do good",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 12,
+                "verseFrom": 9,
+                "verseTo": 13
+              },
+              { "book": "Luke", "chapter": 13, "verseFrom": 10, "verseTo": 17 }
+            ]
+          },
+          {
+            "title": "Enter into God's rest",
+            "verses": [
+              {
+                "book": "Hebrews",
+                "chapter": 4,
+                "verseFrom": 1,
+                "verseTo": null
+              },
+              { "book": "Hebrews", "chapter": 4, "verseFrom": 9, "verseTo": 11 }
             ]
           }
         ]
