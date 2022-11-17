@@ -1857,12 +1857,181 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "Meaning of the salvation",
         "answers": [
           {
-            "title": "",
+            "title": "Redemption from Satan",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "Acts",
+                "chapter": 26,
+                "verseFrom": 18,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Redemption from sin",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 1,
+                "verseFrom": 21,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Redemption from death",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 3,
+                "verseFrom": 16,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Redemption to the Kingdom of God",
+            "verses": [
+              {
+                "book": "2 Timothy",
+                "chapter": 4,
+                "verseFrom": 18,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Why do we need salvation?",
+        "answers": [
+          {
+            "title": "We have all sinned",
+            "verses": [
+              {
+                "book": "Romans",
+                "chapter": 3,
+                "verseFrom": 23,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "We can not save ourselves",
+            "verses": [
+              {
+                "book": "Romans",
+                "chapter": 3,
+                "verseFrom": 20,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "The savior",
+        "answers": [
+          {
+            "title": "God through Jesus Christ",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 4,
+                "verseFrom": 10,
+                "verseTo": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Way to the salvation",
+        "answers": [
+          {
+            "title": "Faith",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 16,
+                "verseFrom": 31,
+                "verseTo": null
+              },
+              {
+                "book": "John",
+                "chapter": 3,
+                "verseFrom": 15,
+                "verseTo": 16
+              }
+            ]
+          },
+          {
+            "title": "Repentance",
+            "verses": [
+              {
+                "book": "Acts",
+                "chapter": 3,
+                "verseFrom": 19,
+                "verseTo": null
+              },
+              {
+                "book": "Acts",
+                "chapter": 2,
+                "verseFrom": 38,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Be baptized",
+            "verses": [
+              {
+                "book": "Mark",
+                "chapter": 16,
+                "verseFrom": 16,
+                "verseTo": null
+              },
+              {
+                "book": "1 Peter",
+                "chapter": 3,
+                "verseFrom": 21,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Receive the Holy Spirit",
+            "verses": [
+              {
+                "book": "John",
+                "chapter": 3,
+                "verseFrom": 5,
+                "verseTo": null
+              },
+              { "book": "Titus", "chapter": 3, "verseFrom": 5, "verseTo": 6 }
+            ]
+          },
+          {
+            "title": "Obey the commandments of God",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 7,
+                "verseFrom": 21,
+                "verseTo": null
+              },
+              {
+                "book": "Matthew",
+                "chapter": 19,
+                "verseFrom": 17,
+                "verseTo": null
+              }
             ]
           }
         ]
@@ -1875,12 +2044,366 @@
     "points": [
       {
         "id": 1,
-        "title": "",
+        "title": "The Lord's Day",
         "answers": [
           {
-            "title": "",
+            "title": "Feared by the wicked and impenitent",
             "verses": [
-              { "book": "John", "chapter": 4, "verseFrom": 24, "verseTo": null }
+              {
+                "book": "Revelation",
+                "chapter": 1,
+                "verseFrom": 7,
+                "verseTo": null
+              },
+              {
+                "book": "Matthew",
+                "chapter": 24,
+                "verseFrom": 30,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Longed for by the saved",
+            "verses": [
+              {
+                "book": "Philippians",
+                "chapter": 3,
+                "verseFrom": 20,
+                "verseTo": null
+              },
+              {
+                "book": "Revelation",
+                "chapter": 22,
+                "verseFrom": 20,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Prophesied in the New Testament",
+        "answers": [
+          {
+            "title": "By Christ himself",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 26,
+                "verseFrom": 64,
+                "verseTo": null
+              },
+              {
+                "book": "Luke",
+                "chapter": 21,
+                "verseFrom": 27,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "By the angels",
+            "verses": [
+              { "book": "Acts", "chapter": 1, "verseFrom": 10, "verseTo": 11 }
+            ]
+          },
+          {
+            "title": "By the apostles",
+            "verses": [
+              {
+                "book": "2 Peter",
+                "chapter": 3,
+                "verseFrom": 9,
+                "verseTo": 10
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 9,
+                "verseFrom": 28,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Unknown time",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 24,
+                "verseFrom": 36,
+                "verseTo": null
+              },
+              {
+                "book": "Luke",
+                "chapter": 12,
+                "verseFrom": 40,
+                "verseTo": null
+              },
+              {
+                "book": "1 Thessalonians",
+                "chapter": 5,
+                "verseFrom": 2,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Coming soon",
+            "verses": [
+              {
+                "book": "Philippians",
+                "chapter": 4,
+                "verseFrom": 5,
+                "verseTo": null
+              },
+              {
+                "book": "James",
+                "chapter": 5,
+                "verseFrom": 8,
+                "verseTo": null
+              },
+              {
+                "book": "Revelation",
+                "chapter": 22,
+                "verseFrom": 7,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "For what does Christ come again?",
+        "answers": [
+          {
+            "title": "To take the believers to himself",
+            "verses": [
+              {
+                "book": "1 Thessalonians",
+                "chapter": 4,
+                "verseFrom": 16,
+                "verseTo": 17
+              },
+              {
+                "book": "John",
+                "chapter": 14,
+                "verseFrom": 1,
+                "verseTo": 3
+              }
+            ]
+          },
+          {
+            "title": "To judge the wicked",
+            "verses": [
+              { "book": "Jude", "chapter": 1, "verseFrom": 14, "verseTo": 15 },
+              { "book": "Luke", "chapter": 12, "verseFrom": 45, "verseTo": 48 }
+            ]
+          },
+          {
+            "title": "To reward the righteous",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 24,
+                "verseFrom": 36,
+                "verseTo": null
+              },
+              {
+                "book": "Luke",
+                "chapter": 12,
+                "verseFrom": 40,
+                "verseTo": null
+              },
+              {
+                "book": "1 Thessalonians",
+                "chapter": 5,
+                "verseFrom": 2,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "To establish his kingdom",
+            "verses": [
+              {
+                "book": "Daniel",
+                "chapter": 7,
+                "verseFrom": 13,
+                "verseTo": 14
+              },
+              {
+                "book": "Revelation",
+                "chapter": 11,
+                "verseFrom": 15,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "To dissolve everything earthly",
+            "verses": [
+              {
+                "book": "2 Peter",
+                "chapter": 3,
+                "verseFrom": 10,
+                "verseTo": 12
+              },
+              {
+                "book": "Hebrews",
+                "chapter": 1,
+                "verseFrom": 12,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "To create a new heaven and a new earth",
+            "verses": [
+              {
+                "book": "2 Peter",
+                "chapter": 3,
+                "verseFrom": 13,
+                "verseTo": null
+              },
+              {
+                "book": "Revelation",
+                "chapter": 21,
+                "verseFrom": 1,
+                "verseTo": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Preparation for the Second Coming",
+        "answers": [
+          {
+            "title": "Accept the lord",
+            "verses": [
+              {
+                "book": "2 Thessalonians",
+                "chapter": 1,
+                "verseFrom": 7,
+                "verseTo": 9
+              },
+              {
+                "book": "Isaiah",
+                "chapter": 55,
+                "verseFrom": 6,
+                "verseTo": 7
+              }
+            ]
+          },
+          {
+            "title": "Being obedient to God",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 7,
+                "verseFrom": 21,
+                "verseTo": 23
+              }
+            ]
+          },
+          {
+            "title": "Remain pure",
+            "verses": [
+              {
+                "book": "1 Thessalonians",
+                "chapter": 5,
+                "verseFrom": 23,
+                "verseTo": null
+              },
+              {
+                "book": "1 Timothy",
+                "chapter": 6,
+                "verseFrom": 14,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Be watchful",
+            "verses": [
+              {
+                "book": "Mark",
+                "chapter": 13,
+                "verseFrom": 32,
+                "verseTo": 37
+              },
+              {
+                "book": "Luke",
+                "chapter": 12,
+                "verseFrom": 37,
+                "verseTo": 40
+              }
+            ]
+          },
+          {
+            "title": "Go to the assemblies",
+            "verses": [
+              {
+                "book": "Hebrews",
+                "chapter": 10,
+                "verseFrom": 25,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Be filled with the Holy Spirit",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 25,
+                "verseFrom": 1,
+                "verseTo": 13
+              },
+              {
+                "book": "1 John",
+                "chapter": 2,
+                "verseFrom": 28,
+                "verseTo": null
+              }
+            ]
+          },
+          {
+            "title": "Be a faithful steward",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 25,
+                "verseFrom": 14,
+                "verseTo": 30
+              },
+              {
+                "book": "Luke",
+                "chapter": 12,
+                "verseFrom": 42,
+                "verseTo": 44
+              }
+            ]
+          },
+          {
+            "title": "Do deeds of love",
+            "verses": [
+              {
+                "book": "Matthew",
+                "chapter": 25,
+                "verseFrom": 31,
+                "verseTo": 46
+              },
+              {
+                "book": "1 Peter",
+                "chapter": 4,
+                "verseFrom": 7,
+                "verseTo": 8
+              }
             ]
           }
         ]
