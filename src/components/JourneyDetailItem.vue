@@ -15,6 +15,21 @@
           <q-item-label caption lines="2" style="word-wrap: break-word">
             {{ item.detail }}
           </q-item-label>
+          <q-item-label caption lines="3" style="word-wrap: break-word">
+            <div class="row q-col-gutter-sm">
+              <div
+                v-for="(bible, index) in parseBibleVerses(item.bibleVerses)"
+                :key="index"
+              >
+                <bible-label-verse
+                  :book-name="bible.book"
+                  :chapter-number="bible.chapter"
+                  :verse-from-number="bible.verse"
+                  mode="journey"
+                ></bible-label-verse>
+              </div>
+            </div>
+          </q-item-label>
         </q-item-section>
 
         <q-item-section side>
@@ -54,10 +69,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref } from 'vue';
+import { defineComponent, onMounted, PropType, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import localforage from 'localforage';
 import { useQuasar } from 'quasar';
+
+import BibleLabelVerse from 'src/components/BibleLabelVerse.vue';
+
+interface IBibleReferenceValue {
+  book: string;
+  chapter: number;
+  verse: number;
+}
 
 interface JourneyItem {
   id: string;
@@ -65,11 +88,13 @@ interface JourneyItem {
   detail: string;
   category: string;
   date: string;
+  bibleVerses: string;
 }
 
 export default defineComponent({
   name: 'JourneyDetailItem',
   emits: ['delete-item'],
+  components: { BibleLabelVerse },
   props: {
     list: {
       type: Array as PropType<JourneyItem[]>,
@@ -151,12 +176,21 @@ export default defineComponent({
       router.push(`/edit/${item.id}/journey`);
     }
 
+    function parseBibleVerses(bibleVerseString: string) {
+      if (bibleVerseString) {
+        return JSON.parse(bibleVerseString);
+      }
+
+      return null;
+    }
+
     return {
       openDialog,
       getIconString,
       onItemClick,
       onDelete,
       onEdit,
+      parseBibleVerses,
     };
   },
 });

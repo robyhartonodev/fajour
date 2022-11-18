@@ -35,6 +35,7 @@
                           <div
                             v-for="(verse, indexVerse) in answer.verses"
                             :key="indexVerse"
+                            class="col-12 col-md-3"
                           >
                             <bible-label-verse
                               :book-name="verse.book"
@@ -60,13 +61,6 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
-import chapterOneJson from 'src/assets/basic-beliefs/chapter1.json';
-import chapterTwoJson from 'src/assets/basic-beliefs/chapter2.json';
-import chapterThreeJson from 'src/assets/basic-beliefs/chapter3.json';
-import chapterFourJson from 'src/assets/basic-beliefs/chapter4.json';
-import chapterFiveJson from 'src/assets/basic-beliefs/chapter5.json';
-import chapterSixJson from 'src/assets/basic-beliefs/chapter6.json';
-
 import beliefCompacts from 'src/assets/basic-belief-compact/beliefs.json';
 
 import BibleLabelVerse from 'src/components/BibleLabelVerse.vue';
@@ -103,15 +97,6 @@ export default defineComponent({
   setup() {
     const searchText = ref('');
 
-    const chapterList = [
-      chapterOneJson,
-      chapterTwoJson,
-      chapterThreeJson,
-      chapterFourJson,
-      chapterFiveJson,
-      chapterSixJson,
-    ];
-
     const beliefs: IBeliefCompact[] = beliefCompacts;
 
     onMounted(() => {
@@ -120,7 +105,6 @@ export default defineComponent({
 
     return {
       searchText,
-      chapterList,
       beliefs,
     };
   },

@@ -49,12 +49,19 @@ import JourneyDetailItem from 'src/components/JourneyDetailItem.vue';
 import { date } from 'quasar';
 import localforage from 'localforage';
 
+interface IBibleReferenceValue {
+  book: string;
+  chapter: number;
+  verse: number;
+}
+
 interface JourneyItem {
   id: string;
   title: string;
   detail: string;
   category: string;
   date: string;
+  bibleVerses: string;
 }
 
 interface JourneyList {

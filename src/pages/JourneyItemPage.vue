@@ -351,8 +351,6 @@ export default defineComponent({
             category.value = recordValue.category;
             title.value = recordValue.title;
             bibleVerses.value = JSON.parse(recordValue.bibleVerses);
-
-            console.log(JSON.parse(recordValue.bibleVerses));
           }
         });
       }

@@ -6,6 +6,7 @@
         color="primary"
         outline
         @click="openDialog = true"
+        class="full-width"
       />
     </div>
     <div v-if="mode == 'viewer'">
@@ -17,7 +18,16 @@
         @click="openDialog = true"
       />
     </div>
-    <q-dialog v-model="openDialog" full-height full-width>
+    <div v-if="mode == 'journey'">
+      <q-btn
+        color="primary"
+        :label="label"
+        outline
+        size="sm"
+        @click="openDialog = true"
+      />
+    </div>
+    <q-dialog v-model="openDialog" full-width>
       <q-card class="column full-height">
         <q-card-section>
           <div class="row items-center justify-between">
@@ -72,11 +82,11 @@ export default defineComponent({
       default: 1,
     },
     verseToNumber: {
-      type: Object as PropType<number | null>,
+      type: Number as PropType<number | null>,
       default: null,
     },
     mode: {
-      type: String as PropType<'default' | 'viewer'>,
+      type: String as PropType<'default' | 'viewer' | 'journey'>,
       default: 'default',
     },
   },
