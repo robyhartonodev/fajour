@@ -25,6 +25,7 @@
         outline
         size="sm"
         @click="openDialog = true"
+        class="full-width"
       />
     </div>
     <q-dialog v-model="openDialog" full-width>

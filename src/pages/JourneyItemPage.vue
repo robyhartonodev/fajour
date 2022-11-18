@@ -85,14 +85,14 @@
             <q-item-section>
               <q-item-label>{{ scope.opt.label }}</q-item-label>
             </q-item-section>
-            <q-item-section side>
+            <!-- <q-item-section side>
               <bible-label-verse
                 :book-name="scope.opt.value.book"
                 :chapter-number="scope.opt.value.chapter"
                 :verse-from-number="scope.opt.value.verse"
                 mode="viewer"
               />
-            </q-item-section>
+            </q-item-section> -->
           </q-item>
         </template>
 
@@ -157,7 +157,7 @@ interface JourneyItem {
 
 export default defineComponent({
   name: 'JourneyItemPage',
-  components: { BibleLabelVerse },
+  // components: { BibleLabelVerse },
   setup() {
     const route = useRoute();
     const router = useRouter();

@@ -9,17 +9,23 @@
     <div>
       <q-item clickable>
         <q-item-section>
-          <q-item-label style="word-wrap: break-word">
+          <q-item-label style="word-wrap: break-word" class="text-justify">
             {{ item.title }}
           </q-item-label>
-          <q-item-label caption lines="2" style="word-wrap: break-word">
+          <q-item-label
+            caption
+            style="word-wrap: break-word"
+            class="text-justify"
+          >
             {{ item.detail }}
           </q-item-label>
-          <q-item-label caption lines="3" style="word-wrap: break-word">
+          <q-item-label caption style="word-wrap: break-word">
+            <div class="q-my-sm text-secondary font-bold">Verses</div>
             <div class="row q-col-gutter-sm">
               <div
                 v-for="(bible, index) in parseBibleVerses(item.bibleVerses)"
                 :key="index"
+                class="col-6 col-md-3"
               >
                 <bible-label-verse
                   :book-name="bible.book"
