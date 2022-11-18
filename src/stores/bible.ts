@@ -107,29 +107,43 @@ export const useBibleStore = defineStore('bible', {
         });
       }
     },
-    getVerseText(bookName: string, chapterNumber: number, verseNumber: number) {
+    getVerses(
+      bookName: string,
+      chapterNumber: number,
+      verseFromNumber: number,
+      verseToNumber: number | null = null
+    ): IVerse[] {
       const book = this.bible.books.find((item) => {
         return item.name == bookName;
       });
+
+      // Generate array verses for number from the given range
+      let arrayVerses: number[] = [];
+      if (verseToNumber) {
+        for (let i = verseFromNumber; i <= verseToNumber; i++) {
+          arrayVerses.push(i);
+        }
+      } else {
+        arrayVerses = [verseFromNumber];
+      }
 
       if (book) {
         const chapter = book.chapters.find((item) => {
           return item.num == chapterNumber;
         });
         if (chapter) {
-          const verse = chapter.verses.find((item) => {
-            return (item.num = verseNumber);
+          // Get the verses from given verse number range array
+          const verses = chapter.verses.filter((item) => {
+            return arrayVerses.includes(item.num);
           });
-          if (verse) {
-            return verse.text;
+
+          if (verses) {
+            return verses;
           }
         }
       }
 
-      return 'Not found';
+      return [];
     },
-    // redirectToVerseText(bookName, chapterNumber, verseNumber) {
-    //   // TODO
-    // },
   },
 });

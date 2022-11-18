@@ -1,47 +1,55 @@
 <template>
   <q-page padding>
-    <q-input
-      filled
-      bottom-slots
-      v-model="searchText"
-      label="Search by question or statement title"
-    >
-      <template v-slot:before>
-        <q-icon name="help" color="secondary"> </q-icon>
-      </template>
-      <template v-slot:append>
-        <q-icon
-          v-if="searchText !== ''"
-          name="close"
-          @click="searchText = ''"
-          class="cursor-pointer"
-        />
-        <q-icon name="search" />
-      </template>
-    </q-input>
-
+    <div class="text-h4 text-primary q-mb-md q-pa-sm">10 Basic Beliefs</div>
     <q-list padding separator bordered>
       <q-expansion-item
         clickable
-        :label="chapter.title"
-        :caption="`Chapter ${indexChapter + 1}`"
-        v-for="(chapter, indexChapter) in chapterList"
-        :key="indexChapter"
+        :label="belief.title"
+        :caption="`Section ${indexBelief + 1}`"
+        v-for="(belief, indexBelief) in beliefs"
+        :key="indexBelief"
       >
         <q-list separator>
           <q-item
-            v-for="(question, indexQuestion) in chapter.questions"
+            v-for="(point, indexPoint) in belief.points"
             class="text-justify"
-            :key="indexQuestion"
-            :to="`basic-beliefs/chapter/${chapter.id}/question/${question.id}`"
+            :key="indexPoint"
           >
             <q-item-section>
-              <q-item-label>
-                {{ question.title }}
-              </q-item-label>
-              <q-item-label caption>
-                {{ `Question 1.${question.id}` }}
-              </q-item-label>
+              <q-expansion-item
+                clickable
+                :label="`${indexPoint + 1}. ${point.title}`"
+              >
+                <q-list separator>
+                  <q-item
+                    v-for="(answer, indexAnswer) in point.answers"
+                    :key="indexAnswer"
+                    class="text-justify"
+                  >
+                    <q-item-section>
+                      <q-item-label>
+                        {{ answer.title }}
+                      </q-item-label>
+                      <q-item-label>
+                        <div class="row q-col-gutter-sm">
+                          <div
+                            v-for="(verse, indexVerse) in answer.verses"
+                            :key="indexVerse"
+                          >
+                            <bible-label-verse
+                              :book-name="verse.book"
+                              :chapter-number="verse.chapter"
+                              :verse-from-number="verse.verseFrom"
+                              :verse-to-number="verse.verseTo"
+                            >
+                            </bible-label-verse>
+                          </div>
+                        </div>
+                      </q-item-label>
+                    </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-expansion-item>
             </q-item-section>
           </q-item>
         </q-list>
@@ -59,8 +67,39 @@ import chapterFourJson from 'src/assets/basic-beliefs/chapter4.json';
 import chapterFiveJson from 'src/assets/basic-beliefs/chapter5.json';
 import chapterSixJson from 'src/assets/basic-beliefs/chapter6.json';
 
+import beliefCompacts from 'src/assets/basic-belief-compact/beliefs.json';
+
+import BibleLabelVerse from 'src/components/BibleLabelVerse.vue';
+
+interface IBeliefCompactVerse {
+  book: string;
+  chapter: number;
+  verseFrom: number;
+  verseTo: number | null;
+}
+
+interface IBeliefCompactAnswer {
+  title: string;
+  verses: IBeliefCompactVerse[];
+}
+
+interface IBeliefCompactPoint {
+  id: number;
+  title: string;
+  answers: IBeliefCompactAnswer[];
+}
+
+interface IBeliefCompact {
+  id: number;
+  title: string;
+  points: IBeliefCompactPoint[];
+}
+
 export default defineComponent({
   name: 'BasicBeliefPage',
+  components: {
+    BibleLabelVerse,
+  },
   setup() {
     const searchText = ref('');
 
@@ -73,6 +112,8 @@ export default defineComponent({
       chapterSixJson,
     ];
 
+    const beliefs: IBeliefCompact[] = beliefCompacts;
+
     onMounted(() => {
       //
     });
@@ -80,6 +121,7 @@ export default defineComponent({
     return {
       searchText,
       chapterList,
+      beliefs,
     };
   },
 });

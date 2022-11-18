@@ -127,11 +127,16 @@ export default defineComponent({
         content: 'Reflections',
         to: '/reflections',
       },
-      // {
-      //   icon: 'question_mark',
-      //   content: 'Basic Beliefs (FAQ)',
-      //   to: '/basic-beliefs',
-      // },
+      {
+        icon: 'question_mark',
+        content: '10 Basic Beliefs',
+        to: '/basic-beliefs',
+      },
+      {
+        icon: 'diversity_3',
+        content: 'Credits',
+        to: '/credits',
+      },
       // {
       //   icon: 'edit_note',
       //   content: 'Sermont Notes (Coming Soon...)',

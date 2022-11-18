@@ -12,7 +12,7 @@
         label="Date*"
         mask="##-##-####"
         clearable
-        :rules="[(val) => !!val || 'Field is required']"
+        :rules="[(val: any) => !!val || 'Field is required']"
       >
         <template v-slot:append>
           <q-icon name="event" class="cursor-pointer">
@@ -40,7 +40,7 @@
         clearable
         options-selected-class="text-secondary"
         emit-value
-        :rules="[(val) => !!val || 'Field is required']"
+        :rules="[(val: any) => !!val || 'Field is required']"
       >
         <template v-slot:option="scope">
           <q-item v-bind="scope.itemProps">
@@ -63,12 +63,53 @@
         :rules="[(val) => !!val || 'Field is required']"
       />
 
+      <!-- Reference verses -->
+      <q-select
+        filled
+        v-model="bibleVerses"
+        :options="verseOptions"
+        label="Verses"
+        options-selected-class="text-secondary"
+        emit-value
+        multiple
+        use-input
+        input-debounce="500"
+        option-value="value"
+        option-label="label"
+        @filter="onFilterBibleSelect"
+        use-chips
+        map-options
+      >
+        <template v-slot:option="scope">
+          <q-item v-bind="scope.itemProps">
+            <q-item-section>
+              <q-item-label>{{ scope.opt.label }}</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <bible-label-verse
+                :book-name="scope.opt.value.book"
+                :chapter-number="scope.opt.value.chapter"
+                :verse-from-number="scope.opt.value.verse"
+                mode="viewer"
+              />
+            </q-item-section>
+          </q-item>
+        </template>
+
+        <template v-slot:no-option>
+          <q-item>
+            <q-item-section class="text-secondary"> No results </q-item-section>
+          </q-item>
+        </template>
+      </q-select>
+
       <q-input
         v-model="detail"
         label="Detail"
         filled
         type="textarea"
         clearable
+        class="q-pt-md"
       />
 
       <div>
@@ -90,6 +131,20 @@ import { defineComponent, onMounted, Ref, ref } from 'vue';
 import { date, useQuasar } from 'quasar';
 import { useRouter, useRoute } from 'vue-router';
 import localforage from 'localforage';
+import { useBibleStore } from 'src/stores/bible';
+
+import BibleLabelVerse from 'src/components/BibleLabelVerse.vue';
+
+interface IBibleReferenceValue {
+  book: string;
+  chapter: number;
+  verse: number;
+}
+
+interface IBibleReference {
+  label: string;
+  value: IBibleReferenceValue;
+}
 
 interface JourneyItem {
   id: string;
@@ -97,10 +152,12 @@ interface JourneyItem {
   detail: string;
   category: string;
   date: string;
+  bibleVerses: string; // stringified of IBibleReferenceValue
 }
 
 export default defineComponent({
   name: 'JourneyItemPage',
+  components: { BibleLabelVerse },
   setup() {
     const route = useRoute();
     const router = useRouter();
@@ -113,6 +170,10 @@ export default defineComponent({
     const title = ref('');
     const itemDate = ref('');
     const category = ref('');
+    const bibleVerses: Ref<IBibleReferenceValue[]> = ref([]);
+
+    const bibleStore = useBibleStore();
+    const verseOptions: Ref<IBibleReference[]> = ref([]);
 
     const categoryOptions = ref([
       {
@@ -146,6 +207,57 @@ export default defineComponent({
       name: 'userJourney',
     });
 
+    function onFilterBibleSelect(
+      val: string,
+      update: (arg0: () => void) => void
+    ) {
+      if (val === '') {
+        update(() => {
+          verseOptions.value = bibleStore.bible.books
+            .map((book) => {
+              return book.chapters.map((chapter) => {
+                return chapter.verses.map((verse) => {
+                  return {
+                    value: {
+                      book: book.name,
+                      chapter: chapter.num,
+                      verse: verse.num,
+                    },
+                    label: `${book.name} ${chapter.num}:${verse.num}`,
+                  };
+                });
+              });
+            })
+            .flat()
+            .flat();
+        });
+        return;
+      }
+
+      update(() => {
+        verseOptions.value = bibleStore.bible.books
+          .map((book) => {
+            return book.chapters.map((chapter) => {
+              return chapter.verses.map((verse) => {
+                return {
+                  value: {
+                    book: book.name,
+                    chapter: chapter.num,
+                    verse: verse.num,
+                  },
+                  label: `${book.name} ${chapter.num}:${verse.num}`,
+                };
+              });
+            });
+          })
+          .flat()
+          .flat()
+          .filter((item) => {
+            return item.label.toLowerCase().indexOf(val) > -1;
+          });
+      });
+    }
+
     function onSubmit() {
       if (formMode.value == 'new') {
         const recordObject = {
@@ -154,6 +266,7 @@ export default defineComponent({
           detail: detail.value,
           category: category.value,
           date: itemDate.value,
+          bibleVerses: JSON.stringify(bibleVerses.value),
         };
 
         userJourneyStore.getItem(itemDate.value).then((value) => {
@@ -187,6 +300,7 @@ export default defineComponent({
               record.detail = detail.value;
               record.category = category.value;
               record.date = itemDate.value;
+              record.bibleVerses = JSON.stringify(bibleVerses.value);
             }
 
             userJourneyStore.setItem(itemDate.value, arrayObject);
@@ -207,6 +321,7 @@ export default defineComponent({
       title.value = '';
       category.value = '';
       itemDate.value = date.formatDate(Date.now(), 'DD-MM-YYYY');
+      bibleVerses.value = [];
     }
 
     function generateRandomId() {
@@ -216,6 +331,7 @@ export default defineComponent({
     function initializePage() {
       itemDate.value = date.formatDate(Date.now(), 'DD-MM-YYYY');
 
+      // Edit page
       if (route.name == 'EditJourney') {
         formMode.value = 'edit';
         itemId.value = route.params.id as string;
@@ -234,12 +350,36 @@ export default defineComponent({
             detail.value = recordValue.detail;
             category.value = recordValue.category;
             title.value = recordValue.title;
+            bibleVerses.value = JSON.parse(recordValue.bibleVerses);
+
+            console.log(JSON.parse(recordValue.bibleVerses));
           }
         });
       }
+
+      // New page
       if (route.name == 'NewJourney') {
         formMode.value = 'new';
       }
+
+      // Verse options pre-fill
+      verseOptions.value = bibleStore.bible.books
+        .map((book) => {
+          return book.chapters.map((chapter) => {
+            return chapter.verses.map((verse) => {
+              return {
+                value: {
+                  book: book.name,
+                  chapter: chapter.num,
+                  verse: verse.num,
+                },
+                label: `${book.name} ${chapter.num}:${verse.num}`,
+              };
+            });
+          });
+        })
+        .flat()
+        .flat();
     }
 
     onMounted(() => {
@@ -255,6 +395,10 @@ export default defineComponent({
       onSubmit,
       onReset,
       formMode,
+      verseOptions,
+      bibleVerses,
+      onFilterBibleSelect,
+      bibleStore,
     };
   },
 });
