@@ -90,34 +90,6 @@ const routes: RouteRecordRaw[] = [
   },
 
   {
-    path: '/basic-beliefs/chapter/:chapterId/question/:questionId',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/BasicBeliefDetailPage.vue') },
-    ],
-  },
-
-  // {
-  //   path: '/bible',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [
-  //     {
-  //       path: '',
-  //       component: () => import('pages/BiblePage.vue'),
-  //       name: 'bible-page',
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   path: '/bible/chapter/:chapterId/verse/:verseId',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [
-  //     { path: '', component: () => import('pages/BibleDetailPage.vue') },
-  //   ],
-  // },
-
-  {
     path: '/settings',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/SettingsPage.vue') }],
